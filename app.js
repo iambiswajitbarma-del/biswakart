@@ -32,7 +32,7 @@ function renderCart(){
 }
 function openAuth() {
   const dialog = document.getElementById("authDialog");
-
+alert("Login button working!");
   if (!dialog) {
     alert("Login form nahi mila!");
     return;
