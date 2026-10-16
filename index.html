@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c2f">
+  <title>BiswaKart</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">B</span><div><b>BiswaKart</b><small>Shop smart. Shop easy.</small></div></div>
+    <button id="accountBtn" class="outline">Login</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">WELCOME TO BISWAKART</p><h1>Everyday shopping,<br><span>made simple.</span></h1>
+      <p>Explore products and place your order in a few taps.</p><a class="primary linkbtn" href="#products">Shop now</a></div>
+      <div class="hero-art" aria-hidden="true"><span>🛍️</span><i>✦</i><b>Good finds<br>great prices</b></div>
+    </section>
+    <section class="section-head" id="products"><div><p class="eyebrow">OUR COLLECTION</p><h2>Featured products</h2></div><button id="refreshBtn" class="outline">Refresh</button></section>
+    <p id="notice" class="notice">Demo preview: connect Firebase to load your real products and orders.</p>
+    <div id="productGrid" class="grid"></div>
+    <section class="cart-panel">
+      <div class="section-head"><div><p class="eyebrow">READY TO CHECK OUT?</p><h2>Your cart <span id="cartCount" class="count">0</span></h2></div></div>
+      <div id="cartItems" class="cart-items"><p class="muted">Your cart is empty.</p></div>
+      <div class="cart-bottom"><b>Total: ₹<span id="cartTotal">0</span></b><button id="checkoutBtn" class="primary">Place order</button></div>
+    </section>
+    <section id="ordersSection" class="orders-panel hidden"><div class="section-head"><div><p class="eyebrow">YOUR ACCOUNT</p><h2>My orders</h2></div></div><div id="myOrders"></div></section>
+    <section id="adminSection" class="orders-panel hidden"><div class="section-head"><div><p class="eyebrow">STORE MANAGEMENT</p><h2>Admin orders</h2></div><button id="loadOrdersBtn" class="outline">Load orders</button></div><p class="muted">Only a user added to the Firebase <code>admins</code> collection can view orders here.</p><div id="adminOrders"></div></section>
+  </main>
+  <footer><b>BiswaKart</b><span>Simple shopping, with privacy in mind.</span></footer>
+  <dialog id="authDialog">
+    <form method="dialog" id="authForm">
+      <button class="close" value="cancel" aria-label="Close">×</button>
+      <p class="eyebrow">WELCOME BACK</p><h2>Login or create account</h2>
+      <label>Email<input id="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label>Password<input id="password" type="password" required minlength="6" autocomplete="current-password" placeholder="At least 6 characters"></label>
+      <div class="dialog-actions"><button id="loginBtn" type="button" class="primary">Login</button><button id="signupBtn" type="button" class="outline">Create account</button></div>
+      <p id="authMessage" class="muted"></p>
+    </form>
+  </dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

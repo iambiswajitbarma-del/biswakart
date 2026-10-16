@@ -1,0 +1,10 @@
+{
+  "name": "BiswaKart",
+  "short_name": "BiswaKart",
+  "description": "BiswaKart online shopping",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f6f0",
+  "theme_color": "#123c2f",
+  "icons": []
+}
